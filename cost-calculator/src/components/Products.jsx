@@ -8,7 +8,7 @@ export const Products = ({ state, dispatch }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
+      setIsSmallScreen(window.innerWidth <= 1050);
     };
 
     window.addEventListener('resize', handleResize);
@@ -22,18 +22,21 @@ export const Products = ({ state, dispatch }) => {
   };
   const productStyle = {
     display: 'flex',
+    // justifyContent: 'center',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
     width: '100%',
     margin: '0 auto',
+    gap: 5,
   };
 
   const productCardStyle = {
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'center',
     padding: 10,
     border: '1px solid grey',
-    width: '30%',
+    width: isSmallScreen ? '13rem' : '16rem',
     marginTop: 10,
     gap: 10,
     alignItems: 'center',

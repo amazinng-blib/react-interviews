@@ -22,7 +22,7 @@ export function Card({ state, dispatch }) {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768); // Adjust breakpoint as needed
+      setIsSmallScreen(window.innerWidth <= 1050); // Adjust breakpoint as needed
     };
 
     window.addEventListener('resize', handleResize);
@@ -37,7 +37,7 @@ export function Card({ state, dispatch }) {
     margin: 10,
     backgroundColor: '#ececec',
     padding: 10,
-    width: isSmallScreen ? '100%' : '20%',
+    width: isSmallScreen ? '17rem' : '20%',
   };
   return (
     <div style={containerStyle}>
